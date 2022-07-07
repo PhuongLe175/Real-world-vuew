@@ -1,12 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '../views/Home';
+import EventList from '../views/EventList';
+import About from "@/views/About";
+import EventDetails from "@/views/EventDetails";
 
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        name: 'EventList',
+        component: EventList
+    },
+    {
+        path: '/event/:id',
+        name: 'EventDetails',
+        props: true,
+        component: EventDetails
+    },
+    {
+        path:'/about',
+        name: 'About',
+        component: About
     }
 ]
 
